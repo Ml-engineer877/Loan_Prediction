@@ -90,7 +90,7 @@ The dataset contains historical loan applicant information.
 📧 Email: projectmail877@gmail.com   
 
 ## 🤝 Contributors
--Gobi M-Machine Learning Engineer
+- Gobi M-Machine Learning Engineer
 
 ---
 
