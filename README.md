@@ -52,7 +52,17 @@ Normalize continuous features if necessary.
 
 Study correlations between features and target variable.
 
+<img src="images/Correlation.png" alt="Correlation" width="500">
+
 Check for outliers and feature importance.
+
+Box Plot Of Outliers:
+
+<img src="images/Outliers.png" alt="Boxplot" width="500">
+
+Box Plot Of After Replacing Outliers:
+
+<img src="images/Without Outliers.png" alt="Boxplot" width="500">
 
 3️⃣ Model Building – Logistic Regression
 
