@@ -36,7 +36,7 @@ The dataset contains historical loan applicant information.
 3. **Exploratory Data Analysis (EDA)**
    - Visualize distributions and relationships using Matplotlib/Seaborn.
    **Correlation Between The Numeric Columns**
-   <img src="Images/Correlation.png" alt="Correlation" width="600">
+   <img src="Images/Correlation.jpg" alt="Correlation" width="600">
    - Detect outliers in numeric columns.
 4. **Feature Engineering**
    - Scale numeric features if required.
@@ -53,11 +53,11 @@ The dataset contains historical loan applicant information.
 
 **Boxplot of Outliers**
 
-<img src="Images/Outliers.png" alt="Boxplot" width="500">
+<img src="Images/Outliers.jpg" alt="Boxplot" width="500">
 
 **Box Plot After Replacing All The Outliers**
 
-<img src="Images/Without Outliers.png" alt="Workflow" width="600">
+<img src="Images/Without Outliers.jpg" alt="Workflow" width="600">
 
 ---
 
