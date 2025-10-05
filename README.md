@@ -1,114 +1,96 @@
-🏦 Loan Prediction using Logistic Regression
-📘 Overview
+# 🏦 Loan Prediction using Logistic Regression
 
-The Loan Prediction System is a Machine Learning project that predicts whether a loan applicant is likely to get loan approval or not.
-It uses Logistic Regression, a supervised classification algorithm, to learn patterns from historical loan data and predict loan approval outcomes based on applicant information.
+## Overview
+The **Loan Prediction System** predicts whether a loan applicant is likely to get approval or not using **Logistic Regression**.  
+This model helps financial institutions automate the loan approval process and make data-driven decisions.
 
-🎯 Objective
+---
 
-To develop a predictive model using Logistic Regression that automates the loan approval process and helps financial institutions make data-driven decisions quickly and accurately.
+## Dataset
+The dataset contains historical loan applicant information.
 
-📊 Dataset
+| Feature | Description |
+|---------|-------------|
+| Gender | Male / Female |
+| Married | Yes / No |
+| Dependents | Number of dependents |
+| Education | Graduate / Not Graduate |
+| Self_Employed | Yes / No |
+| ApplicantIncome | Applicant’s income |
+| CoapplicantIncome | Co-applicant’s income |
+| LoanAmount | Loan amount in thousands |
+| Loan_Amount_Term | Loan term in months |
+| Credit_History | 1 = good, 0 = bad |
+| Property_Area | Urban / Rural / Semiurban |
+| Loan_Status | Target variable (Y = Approved, N = Not Approved) |
 
-The dataset contains details of past loan applicants. Each record includes personal, financial, and credit-related information used to determine loan eligibility.
+---
 
-Feature	Description
-Loan_ID	Unique Loan Identification Number
-Gender	Male / Female
-Married	Applicant’s marital status
-Dependents	Number of dependents
-Education	Graduate / Not Graduate
-Self_Employed	Yes / No
-ApplicantIncome	Applicant’s income
-CoapplicantIncome	Co-applicant’s income
-LoanAmount	Loan amount (in thousands)
-Loan_Amount_Term	Loan term (in months)
-Credit_History	Credit history (1 = good, 0 = bad)
-Property_Area	Urban / Rural / Semiurban
-Loan_Status	Target variable (Y = Approved, N = Not Approved)
-⚙️ Technologies Used
+## Steps
 
-Python 3.9
+1. **Load the Dataset**
+   - Import CSV file using Pandas.
+2. **Data Cleaning**
+   - Handle missing values using mean/median/mode imputation.
+   - Convert categorical variables into numeric using LabelEncoder.
+3. **Exploratory Data Analysis (EDA)**
+   - Visualize distributions and relationships using Matplotlib/Seaborn.
+   **Correlation Between The Numeric Columns**
+   <img src="Images/Correlation.png" alt="Correlation" width="600">
+   - Detect outliers in numeric columns.
+4. **Feature Engineering**
+   - Scale numeric features if required.
+5. **Model Building**
+   - Train Logistic Regression model.
+6. **Evaluation**
+   - Evaluate using Accuracy, Precision, Recall, F1-score.
+7. **Prediction**
+   - Predict loan approval for new applicants.
 
-NumPy
+---
 
-Pandas
+## Data Visualization
 
-Matplotlib / Seaborn (Visualization)
-
-Scikit-learn (Machine Learning)
-
-
-🧠 Machine Learning Workflow
-1️⃣ Data Preprocessing
-
-Handle missing values using mean/median/mode imputation.
-
-Encode categorical variables using LabelEncoder.
-
-Normalize continuous features if necessary.
-
-2️⃣ Exploratory Data Analysis (EDA)
-
-Study correlations between features and target variable.
-
-<img src="Images/Correlation.png" alt="Correlation" width="500">
-
-Check for outliers and feature importance.
-
-Box Plot Of Outliers:
+**Boxplot of Outliers**
 
 <img src="Images/Outliers.png" alt="Boxplot" width="500">
 
-Box Plot Of After Replacing Outliers:
+**Box Plot After Replacing All The Outliers**
 
-<img src="Images/Without Outliers.png" alt="Boxplot" width="500">
+<img src="Images/Without Outliers.png" alt="Workflow" width="600">
 
-3️⃣ Model Building – Logistic Regression
+---
 
-Logistic Regression is a binary classification algorithm used to predict two outcomes: loan approved (Y) or not approved (N).
+## Results
 
-The sigmoid function is used to estimate probabilities.
-
-4️⃣ Model Training
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
-
-model = LogisticRegression()
-model.fit(X_train, y_train)
-
-5️⃣ Model Evaluation
-
-Evaluate the model using:
-
-Accuracy Score
-
-Confusion Matrix
+| Metric | Score |
+|--------|-------|
+| Accuracy | 81% |
+| Precision | 0.82 |
+| Recall | 0.79 |
+| F1-Score | 0.80 |
 
 
-Example:
+---
 
-y_pred = model.predict(X_test)
-print("Accuracy:", accuracy_score(y_test, y_pred))
+## Handling Outliers
+- Numeric outliers were detected in **ApplicantIncome, CoapplicantIncome, LoanAmount**.  
+- Outliers were handled using **clipping (IQR method)** to retain all rows while reducing extreme values.
 
-📈 Results
-Metric	Score
-Accuracy	~81%
+---
 
-✅ The Logistic Regression model performed consistently well and is interpretable, making it ideal for financial use cases.
+## Future Work
+- Deploy a **Streamlit web app** for user input.  
+- Compare Logistic Regression with **Random Forest** and **XGBoost** models.  
+- Optimize performance using **hyperparameter tuning**.
 
+---
 
-📜 Future Enhancements
+## Contact
+📧 Email: projectmail877@gmail.com   
 
-Apply other ML algorithms (Random Forest, XGBoost) for comparison.
+## 🤝 Contributors
+-Gobi M-Machine Learning Engineer
 
-Build a simple Streamlit web app for user interaction.
+---
 
-Deploy model using Flask API or Heroku/AWS.
-
-🤝 Contributors
-
-Gobi M — Machine Learning Engineer
-
-Open to contributions! Feel free to fork, suggest improvements, or open issues.

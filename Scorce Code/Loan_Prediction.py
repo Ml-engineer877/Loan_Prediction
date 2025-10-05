@@ -91,9 +91,10 @@ print("Predicted Output:",predicted)
 
 #MODEL ACCURACY AND CONFUSION MATRIX
 
-from sklearn.metrics import accuracy_score,confusion_matrix
+from sklearn.metrics import accuracy_score,confusion_matrix,classification_report
 print("Accuracy Of The Model Is :",accuracy_score(predicted,y_test)*100)
 print("Confusion Matrix Is :",confusion_matrix(predicted,y_test))
+print("Classification Report:",classification_report(predicted,y_test))
 
 
 ###CONVERTING THE PYTHON FILE TO PICKLE FILE
