@@ -88,22 +88,6 @@ Accuracy	~81%
 
 ✅ The Logistic Regression model performed consistently well and is interpretable, making it ideal for financial use cases.
 
-📂 Project Structure
-Loan_Prediction_LogReg/
-│
-├── data/
-│   └── loan_dataset.csv
-│
-├── source/
-│   ├── Loan_Prediction.py
-│   ├── Algorithm _Comparision.py
-│   └── Testing_Code.py
-│
-├── models/
-│   └── Model.pkl
-│
-├── README.md
-
 
 📜 Future Enhancements
 
